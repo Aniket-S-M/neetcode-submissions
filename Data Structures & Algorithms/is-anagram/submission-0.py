@@ -1,0 +1,29 @@
+from collections import Counter
+class Solution:
+
+
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s) == Counter(t) 
+        
+        if len(s) != len(t):
+            return False
+        counts , countt = {} , {}
+        for i in range(len(s)):
+            counts[s[i]] = 1 + counts.get(s[i],0)
+        for i in range(len(s)):
+            counts[t[i]] = 1 + counts.get(t[i],0)
+        for c in counts : 
+            if counts[c] != countt.get(c,0) : 
+                return False
+        return True 
+
+        
+        
+        
+
+         
+        
+
+                
+        
+        
